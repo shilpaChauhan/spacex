@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID} from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from "@angular/common";
 import { LaunchService } from '../../service/launch.service';
 import { Router } from "@angular/router";
 
@@ -18,28 +19,25 @@ export class LaunchComponent implements OnInit {
   
 
   constructor(
-  //  @Inject(PLATFORM_ID) private platformId: object,
+    @Inject(PLATFORM_ID) private platformId: object,
     private launchService: LaunchService,
     private router: Router,
   ) {
-   // if (isPlatformBrowser(this.platformId)) {
-     // this.getMethod();
-   // }
+    if (isPlatformBrowser(this.platformId)) {
+     this.getLaunchMethod();
+    }
   }
-  ngOnInit() {
-    this.getLaunchMethod();
-  }
+
+  ngOnInit() {}
 
   getLaunchMethod() {
     this.launchService.getAllLaunches().subscribe((data) => {
       this.launches = data;
-      console.log('data', data);
       this.uniqueLaunchYears = [...new Set(data.map((item: any) => item.launch_year))];
     });
   }
 
   filterLaunch(status: string): void {
-    console.log("event", status);
     this.filters.launchStatus = status;
     this.router.navigate([""], {
       queryParams: this.getRouteObject(),
@@ -62,7 +60,6 @@ export class LaunchComponent implements OnInit {
   }
 
   filterYear(year: any) {
-    console.log(year);
     this.filters.year = year;
     this.router.navigate([""], {
       queryParams: this.getRouteObject()

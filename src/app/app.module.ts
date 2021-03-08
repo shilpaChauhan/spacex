@@ -14,7 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
     LaunchComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

@@ -1,27 +1,66 @@
-# Spacex
+SpaceX Launch Program
+------------------------------
+It is a fully responsive angular application which would help users to list and browse all launches by SpaceX program.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+Features
+------------------------------
+* User can see list of card of `spacex launch`.
+* User can filter launches by selecting custom filters `Launch Year`, `Successful Launch`, `Successful Landing`.
+* Fully responsive for `Mobile View`, `Tablet View`, `Desktop View`
+* SEO friendly.
+* Server side rendering(SSR) implementation.
+* Updating view without refreshing browser.
+* Deployed on Heroku. (url==>  https://assessment-spacex.herokuapp.com/).
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Requirements
+------------------------------
 
-## Code scaffolding
+* ``Angular11``
+* ``Node``
+* ``Es6``
+* ``NPM``
+* ``TypeScript``
+* ``Angular Material``
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run Project(Client Side Rendering)
+------------------------------
+* run command ``git clone https://github.com/shilpaChauhan/spacex.git``
+* ``cd project folder``
+* ``run npm start``
+* ``open app in browser using url http://localhost:4200``
 
-## Build
+Run Project(Server Side Rendering)
+------------------------------
+* run command ``git clone https://github.com/shilpaChauhan/spacex.git``
+* ``cd project folder``
+* ``npm run build:ssr && npm run serve:ssr``
+* ``open app in browser using url http://localhost:4000``
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+Preview
+------------------------------
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Home View showing list of Launches**
 
-## Running end-to-end tests
+![Home Page Desktop](https://imgur.com/6VXabPm.jpg)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+![Home Page Mobile](https://imgur.com/ECVltA1.jpg)
 
-## Further help
+![Home Page Tablet](https://imgur.com/3gAQgu9.jpg)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Filtering Launches by given custom filters**
+
+![Filter by year](https://imgur.com/qwH1RPb.jpg)
+
+![Filter by successfull launches](https://imgur.com/t9iWGtT.jpg)
+
+![Filter by successfull launches and successfull land](https://imgur.com/BIOgDFN.jpg)
+
+![Filter by successfull launches and successfull land and year](https://imgur.com/KSovVdT.jpg)
+
+![No Record Found](https://imgur.com/vQSIY2h.jpg)
+
+
+Live Preview https://assessment-spacex.herokuapp.com/
+
