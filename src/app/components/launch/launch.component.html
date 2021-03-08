@@ -1,0 +1,68 @@
+<div class="container">
+    <header><b> SpaceX Launch Programs </b></header>
+    <div class="launch-container">
+        <div class="left-container">
+            <div class="filter-header">Filters</div>
+            <div class="filter-sub-header">Launch Year</div>
+            <hr/>
+            <div class="launch-year-container">
+                <div *ngFor="let year of uniqueLaunchYears; let i = index">
+                    <button (click)="filterYear(year)" mat-raised-button class="action-button" tabindex="{{ i + 1 }}">
+                        {{ year }}
+                    </button>
+                </div>
+            </div>
+
+            <div class="filter-sub-header" style="margin-top: 35px">Successful Launch</div>
+            <hr/>
+            <div class="launch-land-button">
+                <button mat-raised-button class="action-button" (click)="filterLaunch('true')">True</button>
+                <button mat-raised-button class="action-button" (click)="filterLaunch('false')">False</button>
+            </div>
+            <div class="filter-sub-header" style="margin-top: 35px">Successful Landing</div>
+            <hr/>
+            <div class="launch-land-button">
+                <button mat-raised-button class="action-button" (click)="filterLand('true')">True</button>
+                <button mat-raised-button class="action-button" (click)="filterLand('false')">False</button>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div *ngIf="launches.length > 0; else no_launch" class="card-container">
+                <div *ngFor="let launch of launches" class="launch-card">
+                    <div class="launch-card-details">
+                        <div class="img-container">
+                            <img src="{{ launch.links.mission_patch_small }}" alt="Avatar" class="image" />
+                        </div>
+        
+                        <div class="card-content card-content-details mission-name">
+                            {{ launch.mission_name }} #{{ launch.flight_number }}
+                        </div>
+                        <div>
+                            <span class="card-content-details">Mission IDs:</span>
+                            <ul> <li class="card-content">{{ launch.mission_id }}</li></ul>
+                        </div>
+                        <div>
+                            <span class="card-content-details">Launch Year: &nbsp;</span>
+                            <span class="card-content">{{ launch.launch_year }}</span>
+                        </div>
+                        <div>
+                            <span class="card-content-details">Successful Launch: &nbsp;</span>
+                            <span class="card-content">{{ launch.launch_success }}</span>
+                        </div>
+                        <div>
+                            <span class="card-content-details"> Successful Landing: &nbsp; </span><span class="card-content">{{launch.rocket.first_stage.cores[0].land_success}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer><b>Developed By: </b>Shilpa Chauhan</footer>
+</div>
+
+<ng-template #no_launch>
+    <h1 style="margin-left: 40%">
+        No Record Found !!!
+    </h1>
+</ng-template>

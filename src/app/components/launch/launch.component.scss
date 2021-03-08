@@ -1,0 +1,217 @@
+.container {
+    background-color: #F0F0F0;
+    margin: 0 !important;
+    padding: 30px 30px 0 30px !important;
+    max-width: 100vw !important;
+    height: 100vh;
+
+    header {
+        font-size: 30px;
+    }
+
+    .launch-container {
+        display: flex;
+        padding-top: 15px;
+        .left-container {
+            width: 20%;
+            background-color: white;
+            height: fit-content;
+            padding-bottom: 5%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            font-size: 15px;
+            border-radius: 8px;
+    
+            .filter-header {
+                font-size: 20px;
+                font-weight: 550;
+                padding: 15px 0 0 15px;
+            }
+    
+            .filter-sub-header {
+                text-align: center;
+            }
+    
+            .action-button {
+                background-color: #B2D2A4;
+                margin-top: 15px;
+                width: 80px;
+            }
+        
+            .action-button:hover {
+                background-color: #7bb661;
+            }
+        
+            .action-button:focus {
+                background-color: #7bb661;
+            }
+    
+            hr {
+                width: 70%;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+    
+            .launch-year-container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+    
+            .launch-year-container > div {
+                flex: 1 1 50%;
+                text-align: center;
+            }
+    
+            .launch-land-button {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        .right-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            .card-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            .launch-card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 24%;
+                background-color: white;
+                height: fit-content;
+                border-radius: 8px;
+                margin-bottom: 1%;
+                .launch-card-details {
+                    padding: 20px;
+                    .img-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: lightgray;
+                        .image {
+                            height: 250px;
+                            width: 250px;
+                        }
+                    }
+                    .card-content {
+                        color: blue;
+                    }
+                    .card-content-details {
+                        font-weight: 590;
+                        font-size: 15px;
+                    }
+                    .mission-name {
+                        padding: 10px 0 15px 0;
+                    }
+                }
+            }
+        }   
+    }
+    footer {
+        padding: 30px;
+        text-align: center;
+    }
+}
+
+
+/***** MOBILE VIEW *****/
+@media only screen and (max-width: 700px) {
+    .container {
+        .launch-container {
+            display: block;
+            .left-container {
+                width: 100% !important;
+                margin: 0;
+            }
+            .right-container {
+                display: block;
+                flex-wrap: wrap;
+                width: 100%;
+                .launch-card {
+                    width: 100%;
+                }
+            }
+            .right-container > div {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+  
+  /***** TABLET VIEW *****/
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+    .container {
+        .launch-container {
+            .left-container {
+                width: 33.33% !important;
+                margin: 0;
+            }
+            .right-container {
+                display: flex !important;
+                flex-wrap: wrap;
+                width: 66% !important;
+                .launch-card {
+                    width: 49%;
+                    margin-left: 1%;
+                }
+            }
+            .right-container > div {
+                margin-top: 0px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+  
+  /***** DESKTOP VIEW *****/
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    .container {
+        .launch-container {
+            .left-container {
+                width: 20% !important;
+                margin: 0;
+            }
+            .right-container {
+                display: flex !important;
+                flex-wrap: wrap;
+                width: 80% !important;
+                .launch-card {
+                    width: 24%;
+                    margin-left: 1%;
+                }
+            }
+            .right-container > div {
+                margin-top: 0px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+  
+  /***** BEYOND 1440PX VIEWPORT *****/
+@media only screen and (min-width: 1440px) {
+    .container {
+        .launch-container {
+            .left-container {
+                width: 20% !important;
+                margin: 0;
+            }
+            .right-container {
+                display: flex !important;
+                flex-wrap: wrap;
+                width: 80% !important;
+                .launch-card {
+                    width: 24%;
+                    margin-left: 1%;
+                }
+            }
+            .right-container > div {
+                margin-top: 0px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+  
