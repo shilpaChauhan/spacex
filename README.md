@@ -10,7 +10,7 @@ Features
 * SEO friendly.
 * Server side rendering(SSR) implementation.
 * Updating view without refreshing browser.
-* Deployed on Heroku. (url =>  https://assessment-spacex.herokuapp.com/).
+* Deployed on Heroku. (url =>  http://52.234.213.65/).
 
 
 Requirements
@@ -36,5 +36,5 @@ Run Project(Server Side Rendering)
 * ``npm run build:ssr && npm run serve:ssr``
 * ``open app in browser using url http://localhost:4000``
 
-Live Preview https://assessment-spacex.herokuapp.com/
+Live Preview http://52.234.213.65/
 

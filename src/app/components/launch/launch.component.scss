@@ -164,34 +164,9 @@
         }
     }
 }
-  
-  /***** DESKTOP VIEW *****/
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-    .container {
-        .launch-container {
-            .left-container {
-                width: 20% !important;
-                margin: 0;
-            }
-            .right-container {
-                display: flex !important;
-                flex-wrap: wrap;
-                width: 80% !important;
-                .launch-card {
-                    width: 24%;
-                    margin-left: 1%;
-                }
-            }
-            .right-container > div {
-                margin-top: 0px;
-                margin-bottom: 10px;
-            }
-        }
-    }
-}
-  
-  /***** BEYOND 1440PX VIEWPORT *****/
-@media only screen and (min-width: 1440px) {
+    
+  /***** DESKTOP VIEWPORT *****/
+@media only screen and (min-width: 1024px) {
     .container {
         .launch-container {
             .left-container {
