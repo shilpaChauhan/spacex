@@ -11,7 +11,7 @@ import { Router } from "@angular/router";
 export class LaunchComponent implements OnInit {
   public launches = Array<any>();
   public uniqueLaunchYears = Array<any>();
-  private filters = {
+  public filters = {
     launchStatus: "",
     landStatus: "",
     year: ""

@@ -7,7 +7,7 @@
             <hr/>
             <div class="launch-year-container">
                 <div *ngFor="let year of uniqueLaunchYears; let i = index">
-                    <button (click)="filterYear(year)" mat-raised-button class="action-button" tabindex="{{ i + 1 }}">
+                    <button (click)="filterYear(year)" mat-raised-button [ngClass]="{'highlight-button': filters.year === year}" class="action-button" tabindex="{{ i + 1 }}">
                         {{ year }}
                     </button>
                 </div>
@@ -16,14 +16,14 @@
             <div class="filter-sub-header" style="margin-top: 35px">Successful Launch</div>
             <hr/>
             <div class="launch-land-button">
-                <button mat-raised-button class="action-button" (click)="filterLaunch('true')">True</button>
-                <button mat-raised-button class="action-button" (click)="filterLaunch('false')">False</button>
+                <button mat-raised-button class="action-button launch-button" [ngClass]="{'highlight-button': filters.launchStatus === 'true'}"  (click)="filterLaunch('true')">True</button>
+                <button mat-raised-button class="action-button land-button" [ngClass]="{'highlight-button': filters.launchStatus === 'false'}" (click)="filterLaunch('false')">False</button>
             </div>
             <div class="filter-sub-header" style="margin-top: 35px">Successful Landing</div>
             <hr/>
             <div class="launch-land-button">
-                <button mat-raised-button class="action-button" (click)="filterLand('true')">True</button>
-                <button mat-raised-button class="action-button" (click)="filterLand('false')">False</button>
+                <button mat-raised-button class="action-button" [ngClass]="{'highlight-button': filters.landStatus === 'true'}" (click)="filterLand('true')">True</button>
+                <button mat-raised-button class="action-button" [ngClass]="{'highlight-button': filters.landStatus === 'false'}" (click)="filterLand('false')">False</button>
             </div>
         </div>
 
